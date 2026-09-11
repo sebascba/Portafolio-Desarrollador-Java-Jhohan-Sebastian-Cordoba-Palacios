@@ -27,6 +27,8 @@ body {
     right: 0;
     z-index: 100;
     background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    transition: background 300ms ease;
 }
 
 .nav-link {
@@ -36,11 +38,12 @@ body {
     font-weight: 700;
     text-decoration: none;
     margin-left: 40px;
-    transition: color 300ms ease;
+    transition: color 300ms ease, transform 300ms ease;
 }
 
 .nav-link:hover {
     color: #FFDB5B;
+    transform: translateY(-2px);
 }
 
 .nav-cv {
@@ -132,16 +135,33 @@ body {
 .social-icon {
     color: #fff;
     font-size: 28px;
-    transition: color 300ms ease;
+    transition: color 300ms ease, transform 300ms ease;
 }
 
 .social-icon:hover {
     color: #FFDB5B;
+    transform: translateY(-3px);
 }
 
-main {
-    padding-top: 100px;
+/* ANIMACIONES GENERALES */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SECCIONES GENERALES */
 .section-title {
     text-align: center;
     font-size: 24px;
@@ -150,6 +170,10 @@ main {
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+main {
+    padding-top: 100px;
 }
 
 /* SOBRE MI */
@@ -208,11 +232,13 @@ main {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    transition: transform 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    cursor: default;
 }
 
 .tech-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(255, 221, 91, 0.2);
 }
 
 .tech-card.tech-highlight {
@@ -252,6 +278,12 @@ main {
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
 }
 
 .project-card.project-reverse {
@@ -331,6 +363,12 @@ main {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: color 300ms ease, transform 300ms ease;
+}
+
+.skills-list li:hover {
+    color: #FFDB5B;
+    transform: translateX(4px);
 }
 
 .skills-year {
@@ -346,6 +384,11 @@ main {
 
 .timeline-item {
     margin-bottom: 40px;
+    transition: transform 300ms ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(4px);
 }
 
 .timeline-year {
@@ -389,15 +432,67 @@ footer {
 .footer-content {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-email {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #aaa;
+    transition: color 300ms ease;
+}
+
+.footer-email:hover {
+    color: #FFDB5B;
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 96px;
+    }
+    .hero-subtitle {
+        font-size: 20px;
+    }
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .nav-link {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+}
+
 @media (max-width: 768px) {
+    #navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+    .nav-link {
+        font-size: 16px;
+        margin-left: 15px;
+        margin: 5px 10px;
+    }
+    #inicio {
+        min-height: 70vh;
+    }
     .hero-title {
         font-size: 64px;
     }
     .hero-subtitle {
         font-size: 18px;
+    }
+    .hero-content {
+        margin-top: -40px;
+    }
+    .hero-image {
+        transform: scale(1.15);
     }
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -417,9 +512,69 @@ footer {
     .project-card,
     .project-card.project-reverse {
         flex-direction: column;
+        text-align: center;
     }
-    .nav-link {
-        font-size: 16px;
-        margin-left: 20px;
+    .project-img {
+        width: 180px;
+        height: 150px;
+    }
+    .project-info {
+        padding: 10px;
+    }
+    .code-block pre {
+        padding: 20px;
+    }
+    .code-block code {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 48px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    .hero-social {
+        gap: 15px;
+    }
+    .social-icon {
+        font-size: 22px;
+    }
+    .tech-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .tech-card {
+        height: 60px;
+    }
+    .tech-label {
+        font-size: 18px;
+    }
+    .tech-card i.tech-icon {
+        font-size: 30px;
+    }
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    #sobre-mi,
+    #tecnologias,
+    #proyectos,
+    #cv {
+        padding: 60px 20px;
+    }
+    .project-title {
+        font-size: 20px;
+    }
+    .project-desc {
+        font-size: 13px;
+    }
+    .timeline-title {
+        font-size: 20px;
+    }
+    .cv-subtitle {
+        font-size: 20px;
     }
 }
