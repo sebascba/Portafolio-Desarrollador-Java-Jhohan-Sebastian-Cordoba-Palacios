@@ -22,7 +22,7 @@
         <section id="inicio">
             <div class="hero-bg"></div>
             <div class="hero-content">
-                <h1 class="hero-title">No es solo codigo</h1>
+                <h1 class="hero-title">No es solo código</h1>
                 <p class="hero-subtitle">Diseño la arquitectura invisible detrás de las grandes historias digitales</p>
                 <div class="hero-social">
                     <a href="https://www.linkedin.com/in/jhohan-sebastian-cordoba-palacios-8174b8188/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -30,7 +30,7 @@
                     <a href="IMAGES/CV.pdf" class="social-icon" aria-label="Descargar CV" download><i class="fa-solid fa-file-arrow-down"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" style="left:-420px">
                 <img src="IMAGES/yo portafolio cinematico.png" alt="portafolio cinematico">
             </div>
         </section>
@@ -38,18 +38,18 @@
         <section id="sobre-mi">
             <h2 class="section-title">Sobre mí</h2>
             <div class="code-block">
-                <pre><code class="language-js">class Developer {
-    constructor() {
-        this.profesional = "Ingeniero en Higiene y Seguridad Ocupacional"
-        this.pasion = "desarrollo backend"
+                <pre><code class="language-js"><span style="font-weight:700">class Developer</span> {
+    <span style="font-weight:700">constructor()</span> {
+        this.profesional = <span style="font-weight:400">"Ingeniero en Higiene y Seguridad Ocupacional"</span>
+        this.pasion = <span style="font-weight:400">"desarrollo backend"</span>
     }
 
-    SobreMi() {
-        return `${this.profesional} de formación,
+    <span style="font-weight:700">SobreMi()</span> {
+        return <span style="font-weight:400">`${this.profesional} de formación,
                 hoy en día enfocado en mi ${this.pasion} para crear
                 soluciones tecnológicas que funcionan como un reloj detrás de escena.
                 Desarrollo el motor y la lógica de las aplicaciones para que sean seguras,
-                rápidas y muy fáciles de usar para todos.`
+                rápidas y muy fáciles de usar para todos.`</span>
     }
 }</code></pre>
             </div>
@@ -84,21 +84,33 @@
                     <img src="https://api.builder.io/api/v1/image/assets/TEMP/aefaa24e2c79f9420ba8f7f6e74c438f3a585258?width=426" alt="Ecommerce GPS" class="project-img">
                     <div class="project-info">
                         <h3 class="project-title">Ecommerce GPS</h3>
-                        <p class="project-desc">Desarrollé la arquitectura backend en Java, JavaScript, HTML5 y CSS3 para una plataforma de rastreo comercial, solucionando la integración del catálogo y sincronizando el trabajo en equipo con Git/GitHub para reducir fallas de despliegue a cero y asegurar un flujo continuo.</p>
+                        <p class="project-desc">Arquitectura backend en Java, JS, HTML5 y CSS3 para plataforma de rastreo comercial, integrando catálogo y Git/GitHub para despliegues sin fallas.</p>
+                        <div class="project-buttons">
+                            <a href="#" class="proj-btn proj-demo" aria-label="Demo"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="proj-btn proj-repo" aria-label="Repositorio"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card project-reverse">
                     <img src="https://api.builder.io/api/v1/image/assets/TEMP/eb958d7d38a6c77d138d2d292b03baa16eaccb16?width=426" alt="Blog" class="project-img">
                     <div class="project-info">
                         <h3 class="project-title">Blog para Comunidad Estudiantil</h3>
-                        <p class="project-desc">Diseñé la arquitectura y el frontend con Java, JavaScript, HTML5 y CSS3, resolviendo la organización de publicaciones y optimizando el trabajo colaborativo en Git/GitHub para garantizar desplegables sin conflictos y mejorar la interacción de la comunidad.</p>
+                        <p class="project-desc">Arquitectura y frontend con Java, JS, HTML5 y CSS3 para organizar publicaciones y optimizar el trabajo colaborativo en Git/GitHub.</p>
+                        <div class="project-buttons">
+                            <a href="#" class="proj-btn proj-demo" aria-label="Demo"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="proj-btn proj-repo" aria-label="Repositorio"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="https://api.builder.io/api/v1/image/assets/TEMP/cfa7154dbbb8da48a6fd4e72bb05cf9bc6051840?width=426" alt="Credencial" class="project-img">
                     <div class="project-info">
                         <h3 class="project-title">Credencial de Desarrollador Java</h3>
-                        <p class="project-desc">Certificación de competencias avanzadas en Java, JavaScript, HTML5, CSS3 y Git, validando habilidades técnicas en desarrollo web, resolución de problemas algorítmicos y adopción de buenas prácticas de código bajo estándares de la industria.</p>
+                        <p class="project-desc">Certificación avanzada en Java, JS, HTML5, CSS3 y Git con validación de habilidades técnicas y buenas prácticas de código.</p>
+                        <div class="project-buttons">
+                            <a href="#" class="proj-btn proj-demo" aria-label="Demo"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="proj-btn proj-repo" aria-label="Repositorio"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,13 +136,13 @@
                 <div class="cv-timeline">
                     <div class="timeline-item">
                         <span class="timeline-year">2021</span>
-                        <h4 class="timeline-title">Desarrollador Full Stack MERN</h4>
+                        <h4 class="timeline-title"><span style="color:#FFDB5B">Desarrollador</span> Full Stack MERN</h4>
                         <p class="timeline-place">Universidad Pontificia Bolivariana</p>
                         <p class="timeline-desc">Desarrollo de aplicaciones web escalables con tecnologías modernas.</p>
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-year">2026</span>
-                        <h4 class="timeline-title">Desarrollador Full Stack Java</h4>
+                        <h4 class="timeline-title"><span style="color:#FFDB5B">Desarrollador</span> Full Stack Java</h4>
                         <p class="timeline-place">Generation Colombia</p>
                         <p class="timeline-desc">Enfoque en desarrollo de software y bases de datos.</p>
                     </div>
@@ -142,6 +154,7 @@
     <footer>
         <div class="footer-content">
             <p class="footer-email">sebas200147@gmail.com</p>
+            <p class="footer-copy">&copy; 2026 Jhohan Sebastian Cordoba Palacios. Todos los derechos reservados.</p>
         </div>
     </footer>
 
