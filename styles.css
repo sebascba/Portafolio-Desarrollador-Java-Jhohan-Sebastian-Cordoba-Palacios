@@ -117,7 +117,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-top: -60px;
-    margin-left: 280px;
+    margin-left: 600px;
 }
 
 .hero-title {
@@ -530,7 +530,7 @@ footer {
 }
 
 .footer-email {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     color: #7C614E;
     transition: color 300ms ease;
@@ -541,13 +541,13 @@ footer {
 }
 
 .footer-copy {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
     color: #7C614E;
 }
 
 .footer-socials {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
     color: #7C614E;
     display: flex;
